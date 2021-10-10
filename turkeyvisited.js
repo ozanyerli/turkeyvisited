@@ -1,4 +1,4 @@
-console.log("sa");
+console.log("Hello");
 const HOVER_COLOR = "#d36f80"
 const MAP_COLOR = "#D3D3D3"
 
@@ -8,7 +8,7 @@ d3.json('tr-cities.json').then(function (data) {
     projection.fitSize([width, height], data);
     let path = d3.geoPath().projection(projection);
 
-    let svg = d3.select("#map__container").append('svg').style("width", width).style("height", height);
+    let svg = d3.select("#map_container").append('svg').style("width", width).style("height", height);
 
 
     let g = svg.append('g').selectAll('path').data(data.features).join('path').attr('d', path).attr('fill', MAP_COLOR).attr('stroke', '#000')
@@ -40,7 +40,6 @@ d3.json('tr-cities.json').then(function (data) {
         .enter()
         .append("text")
         .text(function (d) {
-            console.log("yarrak");
             return d.properties.name;
         })
         .attr("x", function (d) {
@@ -54,3 +53,14 @@ d3.json('tr-cities.json').then(function (data) {
         .attr('style', 'color: black;')
         .attr('style', 'pointer-events: none;');
 });
+
+function downloadMap() {
+
+    let div = document.getElementById('map_container')
+    html2canvas(div).then(
+        function (canvas) {
+            canvas.toBlob(function(blob) {
+                saveAs(blob, "turkeyvisited.png")
+            })
+        })
+}

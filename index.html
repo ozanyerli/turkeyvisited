@@ -3,17 +3,23 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Türkiye</title>
+  <title>TurkeyVisited</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
 
 </head>
 
 <body>
 
-  <div id="welcome__text">Ziyaret ettiğiniz illeri aşağıdan işaretleyebilirsiniz!</div>
+  <div id="welcome_text">Ziyaret ettiğiniz illeri aşağıdan işaretleyebilirsiniz!</div>
 
-  <div id="map__container"></div>
+  <div id="map_container"></div>
+
+  <button id="download_button" onclick="downloadMap()">Haritayı İndir</button>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <script src="turkeyvisited.js"></script>
 
