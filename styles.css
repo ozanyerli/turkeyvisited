@@ -48,7 +48,7 @@ body {
 
 #download_button:hover {
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: #d36f80;
 }
 
 #twitter_share {
