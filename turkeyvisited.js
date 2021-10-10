@@ -3,7 +3,7 @@ const HOVER_COLOR = "#d36f80"
 const MAP_COLOR = "#D3D3D3"
 
 d3.json('tr-cities.json').then(function (data) {
-    let width = 1000; height = 800;
+    let width = 1200; height = 800;
     let projection = d3.geoEqualEarth();
     projection.fitSize([width, height], data);
     let path = d3.geoPath().projection(projection);
