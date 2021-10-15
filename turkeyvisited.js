@@ -68,7 +68,7 @@ function downloadMap() {
             ctx.fillStyle = "black";
             ctx.textAlign = "start";
             var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
-            ctx.fillText("ozanyerli.github.io/turkeyvisited", canvas.width / 3.6, canvas.height / 0.75);
+            ctx.fillText("ozanyerli.github.io/turkeyvisited", canvas.width / 2, canvas.height / 2);
 
             canvas.toBlob(function (blob) {
                 saveAs(blob, "turkeyvisited.png")
