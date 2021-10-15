@@ -68,11 +68,13 @@ function downloadMap() {
             ctx.fillStyle = "black";
             ctx.textAlign = "start";
             var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
-            ctx.fillText("ozanyerli.github.io/turkeyvisited", canvas.width, canvas.height);
+            ctx.fillText("ozanyerli.github.io/turkeyvisited", 348, 740);
 
+            ctx.translate(0, canvas.height);   // reset where 0,0 is located
+            ctx.scale(1, -1);    // invert
             ctx.beginPath();
             ctx.moveTo(0, 0);
-            ctx.lineTo(canvas.width, canvas.height);
+            //ctx.lineTo(canvas.width, canvas.height);
             ctx.stroke();
 
             canvas.toBlob(function (blob) {
