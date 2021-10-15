@@ -62,11 +62,13 @@ function downloadMap() {
     html2canvas(div).then(
         function (canvas) {
 
+            console.log(canvas.width + " " + canvas.height)
             const ctx = canvas.getContext('2d')
             ctx.font = "20px Calibri";
             ctx.fillStyle = "black";
-            ctx.fillText("ozanyerli.github.io/turkeyvisited", 348, 740);
-            //ctx.save()
+            ctx.textAlign = "start";
+            var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
+            ctx.fillText("ozanyerli.github.io/turkeyvisited", canvas.width / 3.6, canvas.height / 0.75);
 
             canvas.toBlob(function (blob) {
                 saveAs(blob, "turkeyvisited.png")
