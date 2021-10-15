@@ -1,20 +1,20 @@
-html, body {
+html {
     height: 100%;
-}
-
-body {
-    background: linear-gradient(to top, white, #d3d3d3);
+    /*background: linear-gradient(to top, white, #d3d3d3); */
+    background-color: #e3e2df;
     background-size: cover;
 }
 
 #welcome_text {
-    color: black;
+    color: #fff2e3;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3%;
     font-family: sans-serif;
     font-size: 2.5em;
+    text-shadow: 0 0 3.5px #000;
+    font-weight: bold;
 }
 
 #map_container {
@@ -28,6 +28,7 @@ body {
     margin-top: 5%;
     width: 1250px;
     height: 550px;
+    background-color: #e3e2df;
 }
 
 #download_button {
@@ -48,7 +49,7 @@ body {
 
 #download_button:hover {
     color: black;
-    background-color: #d36f80;
+    background-color: #EFAE88;
 }
 
 #twitter_share {

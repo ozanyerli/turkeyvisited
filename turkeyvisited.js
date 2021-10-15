@@ -1,6 +1,6 @@
 console.log("Hello");
-const HOVER_COLOR = "#d36f80"
-const MAP_COLOR = "#D3D3D3"
+const HOVER_COLOR = "#EFAE88"
+const MAP_COLOR = "#fff2e3"
 
 d3.json('tr-cities.json').then(function (data) {
     let width = 1200; height = 800;
@@ -34,6 +34,7 @@ d3.json('tr-cities.json').then(function (data) {
     console.log(data.features.map((f) => f.properties.name))
 
     g = svg.append('g')
+
     g
         .selectAll("text")
         .data(data.features)
@@ -52,6 +53,7 @@ d3.json('tr-cities.json').then(function (data) {
         .attr('font-size', '10pt')
         .attr('style', 'color: black;')
         .attr('style', 'pointer-events: none;');
+
 });
 
 function downloadMap() {
@@ -59,7 +61,14 @@ function downloadMap() {
     let div = document.getElementById('map_container')
     html2canvas(div).then(
         function (canvas) {
-            canvas.toBlob(function(blob) {
+
+            const ctx = canvas.getContext('2d')
+            ctx.font = "20px Calibri";
+            ctx.fillStyle = "black";
+            ctx.fillText("ozanyerli.github.io/turkeyvisited", 348, 740);
+            //ctx.save()
+
+            canvas.toBlob(function (blob) {
                 saveAs(blob, "turkeyvisited.png")
             })
         })
