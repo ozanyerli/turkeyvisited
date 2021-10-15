@@ -18,8 +18,8 @@ html {
 }
 
 #map_container {
-    /*border: 3px solid white;
-    border-radius: 10px; */
+    border: 3px solid white;
+    border-radius: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
