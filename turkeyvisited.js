@@ -82,8 +82,8 @@ function downloadMap() {
             ctx.stroke(); */
 
             var destCanvas = document.createElement('canvas');
-            destCanvas.width = 1250;
-            destCanvas.height = 550;
+            destCanvas.width = canvas.width;
+            destCanvas.height = canvas.height;
             var destCtx = destCanvas.getContext('2d')
             destCtx.drawImage(canvas, 0, 0)
 
