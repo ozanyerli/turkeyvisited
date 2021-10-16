@@ -89,7 +89,7 @@ function downloadMap() {
 
             const ctx = destCanvas.getContext('2d')
             ctx.textBaseline = "top"
-            ctx.font = "20px Calibri";
+            ctx.font = "2em Calibri";
             ctx.fillStyle = "black";
             ctx.textAlign = "start";
             var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
