@@ -58,28 +58,9 @@ d3.json('tr-cities.json').then(function (data) {
 
 function downloadMap() {
 
-    /*domtoimage.toBlob(document.getElementById('map_container'))
-    .then(function (blob) {
-        saveAs(blob, 'my-node.png');
-    });*/
-
     let div = document.getElementById('map_container')
     html2canvas(div).then(
         function (canvas) {
-
-            /*console.log(canvas.width + " " + canvas.height)
-            const ctx = canvas.getContext('2d')
-            ctx.textBaseline = "top"
-            ctx.font = "20px Calibri";
-            ctx.fillStyle = "black";
-            ctx.textAlign = "start";
-            var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
-            ctx.fillText("ozanyerli.github.io/turkeyvisited", canvas.width/2, canvas.height/2);
-            
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(canvas.width, canvas.height);
-            ctx.stroke(); */
 
             var destCanvas = document.createElement('canvas');
             destCanvas.width = canvas.width;
