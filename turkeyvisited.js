@@ -8,7 +8,7 @@ d3.json('tr-cities.json').then(function (data) {
     projection.fitSize([width, height], data);
     let path = d3.geoPath().projection(projection);
 
-    let svg = d3.select("#map_container").append('svg').style("width", width).style("height", height);
+    let svg = d3.select("#map_container").append('svg').attr("width", width).attr("height", height);
 
 
     let g = svg.append('g').selectAll('path').data(data.features).join('path').attr('d', path).attr('fill', MAP_COLOR).attr('stroke', '#000')
