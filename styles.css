@@ -51,10 +51,12 @@ html {
     background-color: #EFAE88;
 }
 
-#twitter_share {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 335px;
-    margin-left: 1520px;
+#coffee {
+    float:right;
+    margin-right: 20%;
+    margin-top: 1em;
+}
+
+a {
+    font-size: 1.25em;
 }
