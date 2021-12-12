@@ -50,15 +50,3 @@ html {
     color: black;
     background-color: #EFAE88;
 }
-
-#coffee {
-    float: right;
-    position: relative;
-    margin-right: 20%;
-    margin-top: 2em;
-    z-index: 10;
-}
-
-a {
-    font-size: 1.25em;
-}
