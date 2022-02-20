@@ -52,7 +52,6 @@ html {
 }
 
 #github_logo {
-    margin-left: 950px;
-    margin-top: 1em;
-    padding: 0.5em 1.7em;
+    margin-left: 1000px;
+    opacity: 0.5;
 }
