@@ -6,4 +6,4 @@ Türkiye'de ziyaret ettiğiniz illeri haritadan işaretleyin ve paylaşın!
 
 https://ozanyerli.github.io/turkeyvisited/
 
-![image](images/turkeyvisited.png)
+![image](images/turkeyv)
