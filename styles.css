@@ -50,3 +50,9 @@ html {
     color: black;
     background-color: #EFAE88;
 }
+
+#github_logo {
+    margin-left: 950px;
+    margin-top: 1em;
+    padding: 0.5em 1.7em;
+}
