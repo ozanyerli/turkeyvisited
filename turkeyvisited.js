@@ -1,6 +1,7 @@
 console.log("Hello");
 const HOVER_COLOR = "#EFAE88"
 const MAP_COLOR = "#fff2e3"
+let totalCity = 0;
 
 d3.json('tr-cities.json').then(function (data) {
     let width = 1200; height = 800;
@@ -23,8 +24,12 @@ d3.json('tr-cities.json').then(function (data) {
         .on("click", function (d, i) {
             d.noFill = d.noFill || false;
             if (!d.noFill) {
+                totalCity++;
+                document.getElementById('totalCity').textContent = totalCity;
                 d3.select(this).attr("fill", HOVER_COLOR);
             } else {
+                totalCity--;
+                document.getElementById('totalCity').textContent = totalCity;
                 d3.select(this).attr("fill", MAP_COLOR);
             }
             d.noFill = !d.noFill;
@@ -75,6 +80,7 @@ function downloadMap() {
             ctx.textAlign = "start";
             var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
             ctx.fillText("ozanyerli.github.io/turkeyvisited", 10, canvas.height - 25);
+            ctx.fillText("Toplam Ziyaret Edilen Şehir: "+totalCity, 10, canvas.height - 50);
             
             /*ctx.beginPath();
             ctx.moveTo(0, 0);
