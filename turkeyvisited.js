@@ -79,12 +79,8 @@ function downloadMap() {
             ctx.textAlign = "start";
             var textWidth = ctx.measureText("ozanyerli.github.io/turkeyvisited")
             ctx.fillText("ozanyerli.github.io/turkeyvisited", 10, canvas.height - 25);
+            ctx.fillText(cityCount + "/81", 10, 5);
             
-            /*ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.lineTo(canvas.width, canvas.height);
-            ctx.stroke(); */
-
             destCanvas.toBlob(function (blob) {
                 saveAs(blob, "turkeyvisited.png")
             }) 
