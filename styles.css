@@ -16,6 +16,18 @@ html {
     font-weight: bold;
 }
 
+#city_count_text {
+    color: #fff2e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    text-shadow: 0 0 3.5px #000;
+    font-weight: bold;
+}
+
 #map_container {
     /*border: 3px solid white;
     border-radius: 10px; */

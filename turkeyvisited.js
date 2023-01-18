@@ -1,6 +1,6 @@
-console.log("Hello");
 const HOVER_COLOR = "#EFAE88"
 const MAP_COLOR = "#fff2e3"
+let cityCount = 0
 
 d3.json('tr-cities.json').then(function (data) {
     let width = 1200; height = 800;
@@ -23,8 +23,12 @@ d3.json('tr-cities.json').then(function (data) {
         .on("click", function (d, i) {
             d.noFill = d.noFill || false;
             if (!d.noFill) {
+                cityCount++;
+                document.getElementById("city_count").innerHTML = cityCount;
                 d3.select(this).attr("fill", HOVER_COLOR);
             } else {
+                cityCount--;
+                document.getElementById("city_count").innerHTML= cityCount;
                 d3.select(this).attr("fill", MAP_COLOR);
             }
             d.noFill = !d.noFill;
